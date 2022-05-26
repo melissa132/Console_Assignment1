@@ -18,7 +18,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             //
-            //  Exercise 1
+            //  Exercise 1 Code - Enter number separated by commas
             //
             //  
             Console.Write("Exercise 1 - Please enter numbers separated by commas: ");
