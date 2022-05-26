@@ -59,6 +59,9 @@ namespace ConsoleApp1
             //  Call Method for Exercise 3
             rc = MinSum(marks);
         }
+
+        // here is a comment
+
         public static int targetRange(int[] marks, int target)
         {
             int       FirstPos;
@@ -130,3 +133,4 @@ namespace ConsoleApp1
         }
     }
 }
+
