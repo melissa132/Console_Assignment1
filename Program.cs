@@ -74,8 +74,51 @@ namespace ConsoleApp1
                 string freqsortresultstring;
                 freqsortresultstring = Console.ReadLine();
 
+                //  Call Method for Exercise 4
                 freqsortresultstring = FreqSort(freqsortresultstring);
                 Console.Write("\nSorted string = " + freqsortresultstring);
+
+
+                //
+                //Excercis 5 - given two arrays find the intersection
+                //
+                //
+                Console.Write("\nExercise 5 - Please enter two arrays to find the intersection: ");
+                int[] intersectresult;
+                int[] array1;
+                int[] array2;
+                input = Console.ReadLine
+                array1 = Array.ConvertAll(input.Split(","), input => int.Parse(input));
+                input2 = Console.ReadLine
+                array2 = Array.ConvertAll(input.Split(","), input => int.Parse(input2));
+                
+                //  Call Method for Exercise 5
+                intersectresult = intersectionarrays(array1, array2);
+                Console.Write('[');
+                for (int i = 0; i < intersectresult.Length; i++)
+                    Console.Write(intersectresult[i]);
+                Console.Write(']');
+                
+                //
+                //Excercise 6 - find two distinct indicies, i and j
+                //
+                //
+
+                Console.Write("\nExercise 6 - Find two distinct indicies, i and j: ");
+                char[] inputarr = { 'a', 'b', 'c', 'a' , 'b', 'c'};
+                char[] array1;
+                char[] array2;
+                input = Console.ReadLine
+                array1 = Array.ConvertAll(input.Split(","), input => int.Parse(input));
+                input2 = Console.ReadLine
+                array2 = Array.ConvertAll(input.Split(","), input => int.Parse(input2));
+                bool returnvalue;
+                int absdiff = 2;
+                
+                //  Call Method for Exercise 6
+                returnvalue = containsduplicate(inputarr,absdiff );
+                Console.WriteLine(returnvalue);
+                
             }
             catch
             {
