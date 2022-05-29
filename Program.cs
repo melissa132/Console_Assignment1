@@ -180,7 +180,9 @@ namespace ConsoleApp1
 
         //Excercise4
 
-        /*string freqsortresultstring;
+        /*
+        Console.Write("\nExercise 4 - Please sort string in decreasing order of frequency by character: ");
+        string freqsortresultstring;
         freqsortresultstring = FreqSort("Dell");
         Console.Write(freqsortresultstring);
         */
@@ -217,6 +219,7 @@ namespace ConsoleApp1
         }
         //Excercis5
         /*
+        Console.Write("\nExercise 5 - The intersection of two arrays: ");
         int[] intersectresult;
         intersectresult = intersectionarrays(new int[] { 3,6,2 }, new int[] { 6,3,6,7,3});
         Console.Write('[');
@@ -224,6 +227,7 @@ namespace ConsoleApp1
             Console.Write(intersectresult[i]);
         Console.Write(']');
         */
+        
         public static int[] intersectionarrays(int[] a, int[] b)
         {
             Array.Sort(a);
@@ -251,6 +255,7 @@ namespace ConsoleApp1
         //Excercise6
         /*
 
+        Console.Write("\nExercise 6 - Find two distinct indicies, i and j: ");
         char[] inputarr = { 'a', 'b', 'c', 'a' , 'b', 'c'};
         bool returnvalue;
         int absdiff = 2;
