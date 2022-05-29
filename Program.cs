@@ -298,20 +298,3 @@ namespace ConsoleApp1
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
