@@ -21,26 +21,47 @@ namespace ConsoleApp1
             //  Exercise 1 - Enter number separated by commas
             //
             //  
-            Console.Write("Exercise 1 - Please enter numbers separated by commas: ");
-            input = Console.ReadLine();
-            Console.Write("\nInput numbers: " + input);
-            marks = Array.ConvertAll(input.Split(","), input => int.Parse(input));
+            try
+            {
+                Console.Write("Exercise 1 - Please enter numbers separated by commas: ");
+                input = Console.ReadLine();
+                Console.Write("\nInput numbers: " + input);
+                marks = Array.ConvertAll(input.Split(","), input => int.Parse(input));
 
-            Console.Write("\nPlease enter target number: ");
-            input2 = Console.ReadLine();
-            target = int.Parse(input2);
-            Console.Write("\nTarget number: " + target);
+                Console.Write("\nPlease enter target number: ");
+                input2 = Console.ReadLine();
+                Console.Write("\nTarget number: " + target);
+                target = int.Parse(input2);
+            }
 
-            //  Call Method for Exercise 1
-            rc = targetRange(marks, target);
-
+            catch
+            {
+                Console.WriteLine("An error has occurred.");
+            }
+            finally
+            {
+                Console.WriteLine("Please enter a numeric value only.");
+            }
+        //  Call Method for Exercise 1
+        rc = targetRange(marks, target);
             //
             //  Exercise 2 - Enter string to reverse
             //
             //
-            Console.Write("\n\nExercise 2 - Please enter a string to reverse: ");
-            input = Console.ReadLine();
-            Console.Write("\nInput string entered: " + input);
+            try
+            {
+                Console.Write("\nExercise 2 - Please enter a string to reverse: ");
+                input = Console.ReadLine();
+                Console.Write("\nInput string entered: " + input);
+            }
+            catch
+            {
+                Console.WriteLine("An error has occurred.");
+            }
+            finally
+            {
+                Console.WriteLine("Please enter a numeric value only.");
+            }
 
             //  Call Method for Exercise 2
             RevString = StringReverse(input);
@@ -50,12 +71,22 @@ namespace ConsoleApp1
             //
             //  Exercise 3 - Enter numbers separated by commas
             //
-            //  
-            Console.Write("\n\nExercise 3 - Please enter numbers separated by commas: ");
-            input = Console.ReadLine();
-            Console.Write("\nInput numbers: " + input);
-            marks = Array.ConvertAll(input.Split(","), input => int.Parse(input));
-
+            //
+            try
+            {
+                Console.Write("\nExercise 3 - Please enter numbers separated by commas: ");
+                input = Console.ReadLine();
+                Console.Write("\nInput numbers: " + input);
+                marks = Array.ConvertAll(input.Split(","), input => int.Parse(input));
+            }
+            catch
+            {
+                Console.WriteLine("An error has occurred.");
+            }
+            finally
+            {
+                Console.WriteLine("Please enter a numeric value only.");
+            }
             //  Call Method for Exercise 3
             rc = MinSum(marks);
 
