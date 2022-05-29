@@ -23,95 +23,76 @@ namespace ConsoleApp1
             //  
             try
             {
-                Console.Write("Exercise 1 - Please enter numbers separated by commas: ");
+                Console.Write("Exercise 1 - Please enter numbers in ascending order separated by commas: ");
                 input = Console.ReadLine();
                 Console.Write("\nInput numbers: " + input);
                 marks = Array.ConvertAll(input.Split(","), input => int.Parse(input));
 
                 Console.Write("\nPlease enter target number: ");
                 input2 = Console.ReadLine();
-                Console.Write("\nTarget number: " + target);
+                Console.Write("\nTarget number: " + input2);
                 target = int.Parse(input2);
-            }
 
-            catch
-            {
-                Console.WriteLine("An error has occurred.");
-            }
-            finally
-            {
-                Console.WriteLine("Please enter a numeric value only.");
-            }
-        //  Call Method for Exercise 1
-        rc = targetRange(marks, target);
-            //
-            //  Exercise 2 - Enter string to reverse
-            //
-            //
-            try
-            {
+                //  Call Method for Exercise 1
+                rc = targetRange(marks, target);
+                //
+                //  Exercise 2 - Enter string to reverse
+                //
+                //
+
+
                 Console.Write("\nExercise 2 - Please enter a string to reverse: ");
                 input = Console.ReadLine();
                 Console.Write("\nInput string entered: " + input);
-            }
-            catch
-            {
-                Console.WriteLine("An error has occurred.");
-            }
-            finally
-            {
-                Console.WriteLine("Please enter a numeric value only.");
-            }
-
-            //  Call Method for Exercise 2
-            RevString = StringReverse(input);
-            Console.Write("\nReversed string: " + RevString);
 
 
-            //
-            //  Exercise 3 - Enter numbers separated by commas
-            //
-            //
-            try
-            {
+
+                //  Call Method for Exercise 2
+                RevString = StringReverse(input);
+                Console.Write("\nReversed string: " + RevString);
+
+
+                //
+                //  Exercise 3 - Enter numbers separated by commas
+                //
+                //
+
                 Console.Write("\nExercise 3 - Please enter numbers separated by commas: ");
                 input = Console.ReadLine();
                 Console.Write("\nInput numbers: " + input);
                 marks = Array.ConvertAll(input.Split(","), input => int.Parse(input));
+
+
+                //  Call Method for Exercise 3
+                rc = MinSum(marks);
+
+                //
+                //  Exercise 4 - sort the given string in decreasing order of frequency of occurrence of each character
+                //
+                //
+                Console.Write("\n\nExercise 4 - Please sort string in decreasing order of frequency by character: ");
+                string freqsortresultstring;
+                freqsortresultstring = Console.ReadLine();
+
+                freqsortresultstring = FreqSort(freqsortresultstring);
+                Console.Write("\nSorted string = " + freqsortresultstring);
             }
             catch
             {
-                Console.WriteLine("An error has occurred.");
+                Console.WriteLine("\nAn error has occurred.");
             }
-            finally
-            {
-                Console.WriteLine("Please enter a numeric value only.");
-            }
-            //  Call Method for Exercise 3
-            rc = MinSum(marks);
 
-            //
-            //  Exercise 4 - sort the given string in decreasing order of frequency of occurrence of each character
-            //
-            //
-            Console.Write("\n\nExercise 4 - Please sort string in decreasing order of frequency by character: ");
-            string freqsortresultstring;
-            freqsortresultstring = Console.ReadLine();
-
-            freqsortresultstring = FreqSort(freqsortresultstring);
-            Console.Write("\nSorted string = " + freqsortresultstring);
-        }
-
-        // 
-        // Method:  targetRange
-        // Description: Receives an array of integer points sorted in ascending order, the task is to find the initial and final index of a given target point’s value.
-        // Input:
-        //  marks:  integer array of integer points in ascending order
-        //  target: integer target value
-        // Returns:
-        //  integer - 0
-        //
-        public static int targetRange(int[] marks, int target)
+     }
+    // 
+    // Method:  targetRange
+    // Description: Receives an array of integer points sorted in ascending order, the task is to find the initial and final index of a given target point’s value.
+    // Input:
+    //  marks:  integer array of integer points in ascending order
+    //  target: integer target value
+    // Returns:
+    //  integer - 0
+    //
+    public static int targetRange(int[] marks, int target)
         {
             int FirstPos;
             int LastPos;
