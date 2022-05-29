@@ -104,22 +104,20 @@ namespace ConsoleApp1
                 //
                 //
                 Console.Write("\n\n\n***** Exercise 6 - Find two distinct indicies, i and j *****");
-                char[] inputarr = { 'a', 'b', 'c', 'a' , 'b', 'c'};
-                char[] carray1;
-                char[] carray2;
+                char[] inputarr;
+                int absdiff;
+                bool returnvalue;
+
                 Console.Write("\n** Please enter comma separated characters: ");
                 input = Console.ReadLine();
-                carray1 = Array.ConvertAll(input.Split(","), input => char.Parse(input));
+                inputarr = Array.ConvertAll(input.Split(","), input => char.Parse(input));
                 Console.Write("\n** Please enter difference: ");
                 input2 = Console.ReadLine();
-                carray2 = Array.ConvertAll(input2.Split(","), input2 => char.Parse(input2));
-                bool returnvalue;
-                int absdiff = 2;
+                absdiff = int.Parse(input2);
                 
                 //  Call Method for Exercise 6
-                returnvalue = containsduplicate(inputarr,absdiff );
+                returnvalue = containsduplicate(inputarr, absdiff);
                 Console.WriteLine(returnvalue);
-                
             }
             catch
             {
