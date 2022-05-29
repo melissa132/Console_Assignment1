@@ -89,6 +89,17 @@ namespace ConsoleApp1
             }
             //  Call Method for Exercise 3
             rc = MinSum(marks);
+
+            //
+            //  Exercise 4 - sort the given string in decreasing order of frequency of occurrence of each character
+            //
+            //
+            Console.Write("\n\nExercise 4 - Please sort string in decreasing order of frequency by character: ");
+            string freqsortresultstring;
+            freqsortresultstring = Console.ReadLine();
+
+            freqsortresultstring = FreqSort(freqsortresultstring);
+            Console.Write("\nSorted string = " + freqsortresultstring);
         }
 
         // 
@@ -317,21 +328,4 @@ namespace ConsoleApp1
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
