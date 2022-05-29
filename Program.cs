@@ -38,7 +38,7 @@ namespace ConsoleApp1
             //  Exercise 2 - Enter string to reverse
             //
             //
-            Console.Write("\nExercise 2 - Please enter a string to reverse: ");
+            Console.Write("\n\nExercise 2 - Please enter a string to reverse: ");
             input = Console.ReadLine();
             Console.Write("\nInput string entered: " + input);
 
@@ -51,13 +51,24 @@ namespace ConsoleApp1
             //  Exercise 3 - Enter numbers separated by commas
             //
             //  
-            Console.Write("\nExercise 3 - Please enter numbers separated by commas: ");
+            Console.Write("\n\nExercise 3 - Please enter numbers separated by commas: ");
             input = Console.ReadLine();
             Console.Write("\nInput numbers: " + input);
             marks = Array.ConvertAll(input.Split(","), input => int.Parse(input));
 
             //  Call Method for Exercise 3
             rc = MinSum(marks);
+
+            //
+            //  Exercise 4 - sort the given string in decreasing order of frequency of occurrence of each character
+            //
+            //
+            Console.Write("\n\nExercise 4 - Please sort string in decreasing order of frequency by character: ");
+            string freqsortresultstring;
+            freqsortresultstring = Console.ReadLine();
+
+            freqsortresultstring = FreqSort(freqsortresultstring);
+            Console.Write("\nSorted string = " + freqsortresultstring);
         }
 
         // 
