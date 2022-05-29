@@ -17,51 +17,49 @@ namespace ConsoleApp1
         public static string RevString;
         static void Main(string[] args)
         {
-            //
-            //  Exercise 1 - Enter number separated by commas
-            //
-            //  
             try
             {
-                Console.Write("Exercise 1 - Please enter numbers in ascending order separated by commas: ");
+                //
+                //  Exercise 1 - Enter number separated by commas
+                //
+                // 
+                Console.Write("***** Exercise 1 - Given an array of integers - find the initial and final index for a target *****");
+                Console.Write("\n** Please enter numbers in ascending order separated by commas: ");
                 input = Console.ReadLine();
                 Console.Write("\nInput numbers: " + input);
                 marks = Array.ConvertAll(input.Split(","), input => int.Parse(input));
 
-                Console.Write("\nPlease enter target number: ");
+                Console.Write("\n** Please enter target number: ");
                 input2 = Console.ReadLine();
                 Console.Write("\nTarget number: " + input2);
                 target = int.Parse(input2);
 
                 //  Call Method for Exercise 1
                 rc = targetRange(marks, target);
+
+                //
                 //
                 //  Exercise 2 - Enter string to reverse
                 //
                 //
-
-
-                Console.Write("\nExercise 2 - Please enter a string to reverse: ");
+                Console.Write("\n\n\n***** Exercise 2 - Given a string - reverse the order of characters in each word *****");
+                Console.Write("\n** Please enter a string to reverse: ");
                 input = Console.ReadLine();
                 Console.Write("\nInput string entered: " + input);
-
-
 
                 //  Call Method for Exercise 2
                 RevString = StringReverse(input);
                 Console.Write("\nReversed string: " + RevString);
 
-
                 //
                 //  Exercise 3 - Enter numbers separated by commas
                 //
                 //
-
-                Console.Write("\nExercise 3 - Please enter numbers separated by commas: ");
+                Console.Write("\n\n\n***** Exercise 3 - Given a sorted integer arry - make array elements distinct *****");
+                Console.Write("\n** Please enter numbers separated by commas: ");
                 input = Console.ReadLine();
                 Console.Write("\nInput numbers: " + input);
                 marks = Array.ConvertAll(input.Split(","), input => int.Parse(input));
-
 
                 //  Call Method for Exercise 3
                 rc = MinSum(marks);
@@ -70,27 +68,29 @@ namespace ConsoleApp1
                 //  Exercise 4 - sort the given string in decreasing order of frequency of occurrence of each character
                 //
                 //
-                Console.Write("\n\nExercise 4 - Please sort string in decreasing order of frequency by character: ");
+                Console.Write("\n\n\n***** Exercise 4 - Sort a given string in decreasing order of frequency by character *****");
                 string freqsortresultstring;
+                Console.Write("\n** Please enter string to sort: ");
                 freqsortresultstring = Console.ReadLine();
 
                 //  Call Method for Exercise 4
                 freqsortresultstring = FreqSort(freqsortresultstring);
                 Console.Write("\nSorted string = " + freqsortresultstring);
 
-
                 //
                 //Excercis 5 - given two arrays find the intersection
                 //
                 //
-                Console.Write("\nExercise 5 - Please enter two arrays to find the intersection: ");
+                Console.Write("\n\n\n***** Exercise 5 - Compute intersection of two sets of numbers *****");
                 int[] intersectresult;
                 int[] array1;
                 int[] array2;
-                input = Console.ReadLine
+                Console.Write("\n** Please enter first set of numbers to find the intersection: ");
+                input = Console.ReadLine();
                 array1 = Array.ConvertAll(input.Split(","), input => int.Parse(input));
-                input2 = Console.ReadLine
-                array2 = Array.ConvertAll(input.Split(","), input => int.Parse(input2));
+                Console.Write("\n** Please enter second set of numbers to find the intersection: ");
+                input2 = Console.ReadLine();
+                array2 = Array.ConvertAll(input2.Split(","), input2 => int.Parse(input2));
                 
                 //  Call Method for Exercise 5
                 intersectresult = intersectionarrays(array1, array2);
@@ -98,20 +98,21 @@ namespace ConsoleApp1
                 for (int i = 0; i < intersectresult.Length; i++)
                     Console.Write(intersectresult[i]);
                 Console.Write(']');
-                
+
                 //
                 //Excercise 6 - find two distinct indicies, i and j
                 //
                 //
-
-                Console.Write("\nExercise 6 - Find two distinct indicies, i and j: ");
+                Console.Write("\n\n\n***** Exercise 6 - Find two distinct indicies, i and j *****");
                 char[] inputarr = { 'a', 'b', 'c', 'a' , 'b', 'c'};
-                char[] array1;
-                char[] array2;
-                input = Console.ReadLine
-                array1 = Array.ConvertAll(input.Split(","), input => int.Parse(input));
-                input2 = Console.ReadLine
-                array2 = Array.ConvertAll(input.Split(","), input => int.Parse(input2));
+                char[] carray1;
+                char[] carray2;
+                Console.Write("\n** Please enter comma separated characters: ");
+                input = Console.ReadLine();
+                carray1 = Array.ConvertAll(input.Split(","), input => char.Parse(input));
+                Console.Write("\n** Please enter difference: ");
+                input2 = Console.ReadLine();
+                carray2 = Array.ConvertAll(input2.Split(","), input2 => char.Parse(input2));
                 bool returnvalue;
                 int absdiff = 2;
                 
@@ -122,7 +123,7 @@ namespace ConsoleApp1
             }
             catch
             {
-                Console.WriteLine("\nAn error has occurred.");
+                Console.WriteLine("\n\n****** An error has occurred! ******");
             }
 
      }
