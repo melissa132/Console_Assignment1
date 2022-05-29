@@ -18,7 +18,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             //
-            //  Exercise 1 Code - Enter number separated by commas
+            //  Exercise 1 - Enter number separated by commas
             //
             //  
             Console.Write("Exercise 1 - Please enter numbers separated by commas: ");
@@ -35,7 +35,7 @@ namespace ConsoleApp1
             rc = targetRange(marks, target);
 
             //
-            //  Exercise 2
+            //  Exercise 2 - Enter string to reverse
             //
             //
             Console.Write("\nExercise 2 - Please enter a string to reverse: ");
@@ -48,7 +48,7 @@ namespace ConsoleApp1
 
 
             //
-            //  Exercise 3
+            //  Exercise 3 - Enter numbers separated by commas
             //
             //  
             Console.Write("\nExercise 3 - Please enter numbers separated by commas: ");
@@ -60,19 +60,38 @@ namespace ConsoleApp1
             rc = MinSum(marks);
         }
 
-        // here is a comment
-
+        // 
+        // Method:  targetRange
+        // Description: Receives an array of integer points sorted in ascending order, the task is to find the initial and final index of a given target point’s value.
+        // Input:
+        //  marks:  integer array of integer points in ascending order
+        //  target: integer target value
+        // Returns:
+        //  integer - 0
+        //
         public static int targetRange(int[] marks, int target)
         {
             int FirstPos;
             int LastPos;
 
+            // Find first index position of target number
             FirstPos = Array.IndexOf(marks, target);
+            // Find last index position of target number
             LastPos = Array.LastIndexOf(marks, target);
+            
+            // Ouptut the first and last index positions of the target number
             Console.Write("\nFirst Pos: " + FirstPos.ToString());
             Console.Write("\nLast Pos:  " + LastPos.ToString());
             return 0;
         }
+        // 
+        // Method:  StringReverse
+        // Description: Given a string, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
+        // Input:
+        //  s:  String to reverse
+        // Returns:
+        //    string
+        //
         public static string StringReverse(string s)
         {
             int TotalLen;
@@ -82,26 +101,32 @@ namespace ConsoleApp1
             string OutputWord;
             string OutputPhrase;
 
+            // Initialize variables        
             TotalLen = s.Length;
             CurrPos = 0;
             OutputWord = "";
             OutputPhrase = "";
 
+            // Loop for count of all characters in the string
             for (int i = 0; i < TotalLen; i++)
             {
+                // Blank space indicates new word
                 if (s[i] == ' ')
                 {
+                    // Loop for current word
                     for (int j = i - 1; j >= CurrPos; j--)
 
                     {
                         OutputWord = OutputWord + s[j];
 
                     }
+                   // Add reversed word to output phrase
                     OutputPhrase = OutputPhrase + " " + OutputWord;
                     OutputWord = "";
                     CurrPos = i + 1;
                 }
             }
+            // Last word in phrase to reverse
             for (int j = TotalLen - 1; j >= CurrPos; j--)
             {
                 OutputWord = OutputWord + s[j];
@@ -109,6 +134,16 @@ namespace ConsoleApp1
             OutputPhrase = OutputPhrase + " " + OutputWord;
             return OutputPhrase;
         }
+
+        // 
+        // Method:  MinSum
+        // Description: Given a sorted integer array, make the array elements distinct by increasing each value as needed, while minimizing the array sum. Print the minimum
+        // possible sum as output.
+        // Input:
+        //  nums:  integer array of numbers
+        // Returns:
+        //    integer
+        //
         public static int MinSum(int[] nums)
         {
             int TotalElements;
@@ -116,18 +151,28 @@ namespace ConsoleApp1
             Array.Sort(nums);
             int NumSum;
 
+            // How many numbers were input  
             TotalElements = nums.Length;
+         
+            // Ititialize variables for current number evaluating and sum of numbers
             CurrNum = nums[0];
             NumSum = nums[0];
+
+            // Loop through all numbers
             for (int i = 1; i < TotalElements; i++)
             {
-                if (CurrNum == nums[i])
+                if (CurrNum == nums[i])     // Are the numbers the same?
                 {
-                    nums[i] = nums[i] + 1;
+                    nums[i] = nums[i] + 1;  // Same number so increment value by 1
                 }
-                CurrNum = nums[i];
-                NumSum += CurrNum;
+                else if (CurrNum > nums[i]) // Number is less than 
+                {
+                    nums[i] = nums[i-1] + 1;
+                }
+                CurrNum = nums[i];          // Set current number value
+                NumSum += CurrNum;          // Add current number value to sum
             }
+            // Loop complete, output the sum of the numbers
             Console.Write("\nArray Sum: " + NumSum.ToString());
             ; return 0;
         }
