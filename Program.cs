@@ -242,15 +242,14 @@ namespace ConsoleApp1
             ; return 0;
         }
 
-
-        //Excercise4
-
-        /*
-        Console.Write("\nExercise 4 - Please sort string in decreasing order of frequency by character: ");
-        string freqsortresultstring;
-        freqsortresultstring = FreqSort("Dell");
-        Console.Write(freqsortresultstring);
-        */
+        // 
+        // Method:  FreqSort
+        // Description: Given a string - sort the given string in decreasing order of frequency of occurrence of each character.
+        // Input:
+        //  s:  string to sort
+        // Returns:
+        //    string
+        //
 
         public static string FreqSort(string s)
         {
@@ -282,17 +281,17 @@ namespace ConsoleApp1
             return output;
 
         }
-        //Excercis5
-        /*
-        Console.Write("\nExercise 5 - The intersection of two arrays: ");
-        int[] intersectresult;
-        intersectresult = intersectionarrays(new int[] { 3,6,2 }, new int[] { 6,3,6,7,3});
-        Console.Write('[');
-        for (int i = 0; i < intersectresult.Length; i++)
-            Console.Write(intersectresult[i]);
-        Console.Write(']');
-        */
-        
+
+        // 
+        // Method:  intersectionarrays
+        // Description: Computes the intersection of two numeric sets
+        // Input:
+        //  a:  integer array
+        //  b:  integer array
+        // Returns:
+        //    integer array
+        //
+
         public static int[] intersectionarrays(int[] a, int[] b)
         {
             Array.Sort(a);
@@ -317,16 +316,18 @@ namespace ConsoleApp1
             return result.ToArray();
 
         }
-        //Excercise6
-        /*
 
-        Console.Write("\nExercise 6 - Find two distinct indicies, i and j: ");
-        char[] inputarr = { 'a', 'b', 'c', 'a' , 'b', 'c'};
-        bool returnvalue;
-        int absdiff = 2;
-        returnvalue = containsduplicate(inputarr,absdiff );
-        Console.WriteLine(returnvalue);
-        */
+        // 
+        // Method:  containsduplicate
+        // Description: Given an array of characters and an integer k - find out whether there are two distinct indices i and j in the array such that arr[i]=arr[j] and the
+        //  absolute difference between i and j is at most k.
+        // Input:
+        //  a:  character array
+        //  b:  character array
+        // Returns:
+        //    bool
+        //
+
         public static bool containsduplicate(char[] a, int b)
         {
             bool exists = false;
